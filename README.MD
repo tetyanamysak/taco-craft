@@ -16,8 +16,6 @@ This project demonstrates a full-stack flow using Node.js, Express, and EJS, wit
 <details>
   <summary>Click to view more screenshots (Mobile, Modal, Checkout, Empty Cart)</summary>
 
-- Mobile Version
-  ![Homepage Mobile](./images/homepage-mobile.png)
 - Ingredients Modal
   ![Ingredients Modal](./images/ingredients-modal.png)
 - Empty Cart
@@ -26,6 +24,8 @@ This project demonstrates a full-stack flow using Node.js, Express, and EJS, wit
   ![Empty Cart Alert](./images/empty-cart-alert.png)
 - Checkout Confirmation
   ![Checkout Confirmation](./images/checkout-confirmation.png)
+- Mobile Version
+  ![Homepage Mobile](./images/homepage-mobile.png)
 
 </details>
 
