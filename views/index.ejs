@@ -2,54 +2,43 @@
 <html>
 
 <head>
-  <title>Taco Recipes</title>
+  <title>TacoCraft</title>
   <link rel="stylesheet" type="text/css" href="/styles/main.css">
 </head>
 
 <body>
   <div class="app-container">
-  <h1>🌮 Taco Town 🌮</h1>
 
-  <div class="ingredient-buttons">
-    <button data-choice="chicken">🍗</button>
-<button data-choice="beef">🥩</button>
-<button data-choice="fish">🐟</button>
-  </div>
+    <button id="cartToggle" class="cart-icon" aria-label="View cart">
+      🛒 <span id="cartCount">0</span>
+    </button>
 
-  <div id="recipeContainer">
-    <% if (recipe) { %>
-    <h2 id="recipeTitle">
-        <%= recipe.name %>
-      </h2>
+    <h1>🌮 TacoCraft 🌮</h1>
 
-    <button id="ingredientsButton" onclick="showIngredients()">Show Ingredients</button>
-    <div id="overlay">
-    <div id="ingredientsDiv">
-    <ul id="ingredientsList">
-      <li>
-        <%= recipe.ingredients.protein.name %>, <%= recipe.ingredients.protein.preparation %>
-      </li>
-      <li>
-        <%= recipe.ingredients.salsa.name %>
-      </li>
-      <% recipe.ingredients.toppings.forEach(topping=> { %>
-        <li>
-          <%= topping.quantity %> of <%= topping.name %>
-        </li>
-        <% }) %>
-    </ul>
-     </div>
-     </div>
- <% } else { %>
+    <div class="ingredient-buttons">
+      <button data-choice="chicken">🍗</button>
+      <button data-choice="beef">🥩</button>
+      <button data-choice="fish">🐟</button>
+      <button data-choice="shrimp">🍤</button>
+      <button data-choice="pork">🐖</button>
+      <button data-choice="veggie">🌱</button>
+    </div>
+
+    <div id="recipeContainer">
       <h2 class="pick_your_fav">👆 Pick your favourite taco ingredient 👆</h2>
-    <% } %>
- </div>
+    </div>
 
   </div>
 
-  <form action="/" method="GET">
-  <button type="submit" id="returnToHomepage" <%= recipe ? "" : "disabled" %>> Return to homepage </button>
-</form>
+  <div id="cartPanel" class="cart-panel">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p id="cartTotal">Total: $0.00</p>
+    <button id="checkoutBtn">Checkout</button>
+    <button id="closeCart">Close</button>
+  </div>
+
+  <div id="cartOverlay" class="cart-overlay"></div>
 
   <script src="/script.js"></script>
 

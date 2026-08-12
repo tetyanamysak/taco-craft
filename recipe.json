@@ -1,6 +1,7 @@
 [
   {
     "id": "0001",
+    "choice": "chicken",
     "type": "taco",
     "name": "Chicken Taco",
     "price": 2.99,
@@ -17,28 +18,42 @@
         {
           "name": "Lettuce",
           "quantity": "1 cup",
-          "ingredients": ["Iceberg Lettuce"]
+          "ingredients": [
+            "Iceberg Lettuce"
+          ]
         },
         {
           "name": "Cheese",
           "quantity": "1/2 cup",
-          "ingredients": ["Cheddar Cheese", "Monterey Jack Cheese"]
+          "ingredients": [
+            "Cheddar Cheese",
+            "Monterey Jack Cheese"
+          ]
         },
         {
           "name": "Guacamole",
           "quantity": "2 tablespoons",
-          "ingredients": ["Avocado", "Lime Juice", "Salt", "Onion", "Cilantro"]
+          "ingredients": [
+            "Avocado",
+            "Lime Juice",
+            "Salt",
+            "Onion",
+            "Cilantro"
+          ]
         },
         {
           "name": "Sour Cream",
           "quantity": "2 tablespoons",
-          "ingredients": ["Sour Cream"]
+          "ingredients": [
+            "Sour Cream"
+          ]
         }
       ]
     }
   },
   {
     "id": "0002",
+    "choice": "beef",
     "type": "taco",
     "name": "Beef Taco",
     "price": 3.49,
@@ -55,23 +70,31 @@
         {
           "name": "Onions",
           "quantity": "1/4 cup",
-          "ingredients": ["White Onion", "Red Onion"]
+          "ingredients": [
+            "White Onion",
+            "Red Onion"
+          ]
         },
         {
           "name": "Cilantro",
           "quantity": "2 tablespoons",
-          "ingredients": ["Fresh Cilantro"]
+          "ingredients": [
+            "Fresh Cilantro"
+          ]
         },
         {
           "name": "Queso Fresco",
           "quantity": "1/4 cup",
-          "ingredients": ["Queso Fresco"]
+          "ingredients": [
+            "Queso Fresco"
+          ]
         }
       ]
     }
   },
   {
     "id": "0003",
+    "choice": "fish",
     "type": "taco",
     "name": "Fish Taco",
     "price": 4.99,
@@ -99,12 +122,146 @@
         {
           "name": "Pico de Gallo",
           "quantity": "1/2 cup",
-          "ingredients": ["Tomato", "Onion", "Cilantro", "Lime Juice", "Salt"]
+          "ingredients": [
+            "Tomato",
+            "Onion",
+            "Cilantro",
+            "Lime Juice",
+            "Salt"
+          ]
         },
         {
           "name": "Lime Crema",
           "quantity": "2 tablespoons",
-          "ingredients": ["Sour Cream", "Lime Juice", "Salt"]
+          "ingredients": [
+            "Sour Cream",
+            "Lime Juice",
+            "Salt"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "0004",
+    "choice": "shrimp",
+    "type": "taco",
+    "name": "Shrimp Taco",
+    "price": 5.49,
+    "ingredients": {
+      "protein": {
+        "name": "Shrimp",
+        "preparation": "Sautéed with Garlic"
+      },
+      "salsa": {
+        "name": "Mango Salsa",
+        "spiciness": "Mild"
+      },
+      "toppings": [
+        {
+          "name": "Purple Cabbage Slaw",
+          "quantity": "1 cup",
+          "ingredients": [
+            "Purple Cabbage",
+            "Lime Juice",
+            "Salt"
+          ]
+        },
+        {
+          "name": "Avocado Crema",
+          "quantity": "2 tablespoons",
+          "ingredients": [
+            "Avocado",
+            "Sour Cream",
+            "Lime Juice"
+          ]
+        },
+        {
+          "name": "Radish",
+          "quantity": "2 tablespoons",
+          "ingredients": [
+            "Sliced Radish"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "0005",
+    "choice": "pork",
+    "type": "taco",
+    "name": "Carnitas Taco",
+    "price": 3.99,
+    "ingredients": {
+      "protein": {
+        "name": "Pork",
+        "preparation": "Slow-Cooked Carnitas"
+      },
+      "salsa": {
+        "name": "Salsa Roja",
+        "spiciness": "Hot"
+      },
+      "toppings": [
+        {
+          "name": "Diced Onion",
+          "quantity": "1/4 cup",
+          "ingredients": [
+            "White Onion"
+          ]
+        },
+        {
+          "name": "Cilantro",
+          "quantity": "2 tablespoons",
+          "ingredients": [
+            "Fresh Cilantro"
+          ]
+        },
+        {
+          "name": "Pineapple",
+          "quantity": "1/4 cup",
+          "ingredients": [
+            "Grilled Pineapple"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "0006",
+    "choice": "veggie",
+    "type": "taco",
+    "name": "Veggie Taco",
+    "price": 3.29,
+    "ingredients": {
+      "protein": {
+        "name": "Black Beans & Roasted Veggies",
+        "preparation": "Grilled"
+      },
+      "salsa": {
+        "name": "Tomatillo Salsa",
+        "spiciness": "Mild"
+      },
+      "toppings": [
+        {
+          "name": "Corn",
+          "quantity": "1/4 cup",
+          "ingredients": [
+            "Grilled Corn"
+          ]
+        },
+        {
+          "name": "Cotija Cheese",
+          "quantity": "1/4 cup",
+          "ingredients": [
+            "Cotija Cheese"
+          ]
+        },
+        {
+          "name": "Avocado",
+          "quantity": "2 tablespoons",
+          "ingredients": [
+            "Sliced Avocado"
+          ]
         }
       ]
     }

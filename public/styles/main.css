@@ -1,7 +1,7 @@
 :root {
   --h1-h2-color: #414b1c;
-  --ingrediant-list-color: #2a2e1f;
-  --ingrediant-list-background: #f0f0f0;
+  --ingredient-list-color: #2a2e1f;
+  --ingredient-list-background: #f0f0f0;
   --return-to-homepage-desable: #2a2e1f;
   --ingredient-buttons-button: #637523a8;
   --button-hover: #637523;
@@ -42,6 +42,7 @@ h1 {
   font-size: 5rem;
   text-align: center;
   color: var(--h1-h2-color);
+  margin-bottom: 0;
 }
 
 h2 {
@@ -66,13 +67,13 @@ button {
   border: none;
   background: var(--ingredient-buttons-button);
   backdrop-filter: blur(6px);
-  color: var(--ingrediant-list-background);
+  color: var(--ingredient-list-background);
   font-size: 3rem;
   cursor: pointer;
   padding: 30px;
-  margin: 20px 10px;
-  width: 180px;
-  height: 180px;
+  margin: 25px 10px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   box-shadow: 0 2px 5px var(--button-hover);
   transition: all 0.25s ease;
@@ -99,12 +100,12 @@ button {
 
 #recipeTitle {
   font-size: 2.5rem;
-  margin-bottom: 0px;
+  margin: 0px 0px;
 }
 
 #ingredientsList {
-  background-color: var(--ingrediant-list-background);
-  color: var(--ingrediant-list-color);
+  background-color: var(--ingredient-list-background);
+  color: var(--ingredient-list-color);
   padding: 40px;
   border-radius: 15px;
   backdrop-filter: blur(6px);
@@ -118,9 +119,9 @@ button {
 
 #ingredientsButton {
   background-color: var(--ingredient-buttons-button);
-  color: var(--ingrediant-list-background);
+  color: var(--ingredient-list-background);
   border: none;
-  margin-top: 30px;
+  margin-top: 0;
   padding: 15px 30px;
   font-size: 1.5rem;
   border-radius: 25px;
@@ -135,7 +136,7 @@ button {
 }
 
 #ingredientsDiv {
-  background: var(--ingrediant-list-background);
+  background: var(--ingredient-list-background);
   padding: 25px;
   border-radius: 20px;
   transform: scale(0.8);
@@ -147,7 +148,7 @@ button {
   display: block;
   width: 40px;
   height: 5px;
-  background: var(--ingrediant-list-background);
+  background: var(--ingredient-list-background);
   border-radius: 10px;
   margin: 0 auto 10px;
 }
@@ -160,12 +161,12 @@ button {
   text-align: center;
 }
 
-#returnToHomepage {
+/* #returnToHomepage {
   position: fixed;
   bottom: 50px;
   right: 50px;
   background-color: var(--ingredient-buttons-button);
-  color: var(--ingrediant-list-background);
+  color: var(--ingredient-list-background);
   border: var(--h1-h2-color) solid 1px;
   padding: 15px 30px;
   font-size: 1.5rem;
@@ -181,11 +182,11 @@ button {
 
 #returnToHomepage:disabled {
   background-color: var(--return-to-homepage-desable);
-  color: var(--ingrediant-list-background);
+  color: var(--ingredient-list-background);
   cursor: not-allowed;
   opacity: 0.5;
   border: 1px dashed var(--h1-h2-color);
-}
+} */
 
 .app-container {
   background: var(--container-backgrond);
@@ -194,7 +195,7 @@ button {
   width: 90%;
   max-width: 900px;
   position: relative;
-  height: 750px;
+  height: 1000px;
   overflow: visible;
   display: flex;
   flex-direction: column;
@@ -230,28 +231,31 @@ button {
   pointer-events: all;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   h1 {
     font-size: 3rem;
   }
 
   .app-container {
     height: auto;
+    min-height: 820px;
     padding: 20px;
     margin: 20px 0;
   }
 
   .ingredient-buttons {
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px;
+    margin: 30px 50px;
   }
 
   .ingredient-buttons button {
-    width: 140px;
-    height: 140px;
-    font-size: 2.5rem;
-    margin: 10px 0;
+    width: 120px;
+    height: 120px;
+    font-size: 1.8rem;
+    margin: 0;
   }
 
   #returnToHomepage {
@@ -259,4 +263,166 @@ button {
     margin: 20px auto;
     width: 90%;
   }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+  .app-container {
+    min-height: 500px;
+    padding: 30px;
+  }
+
+  .ingredient-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 20px;
+    margin: 30px 0;
+  }
+
+  .ingredient-buttons button {
+    width: 120px;
+    height: 120px;
+    font-size: 2.2rem;
+  }
+}
+
+.ingredient-buttons {
+  flex-wrap: wrap;
+}
+
+#recipePrice {
+  font-size: 1.5rem;
+  color: var(--h1-h2-color);
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+#addToCartButton {
+  background-color: var(--ingredient-buttons-button);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 20px;
+  transition: transform 0.2s;
+}
+
+#addToCartButton:hover {
+  transform: scale(1.05);
+  background-color: var(--button-hover);
+}
+
+.cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background: var(--button-hover);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+#cartCount {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 998;
+}
+
+.cart-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 320px;
+  height: 100%;
+  background: var(--ingredient-list-background);
+  padding: 30px 20px;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.cart-panel.active {
+  right: 0;
+}
+
+#cartItems {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+#cartItems li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.remove-item {
+  background: none;
+  border: none;
+  color: #b00;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#cartTotal {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+#checkoutBtn,
+#closeCart {
+  background-color: var(--ingredient-buttons-button);
+  color: var(--ingredient-list-background);
+  border: none;
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  z-index: 10;
+}
+
+#checkoutBtn {
+  background-color: var(--ingredient-buttons-button);
+  color: white;
+}
+
+#checkoutBtn:hover {
+  background-color: var(--button-hover);
+}
+
+#closeCart {
+  background-color: #ccc;
+}
+
+#closeCart:hover {
+  background-color: #9e9e9e;
 }
