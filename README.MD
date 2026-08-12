@@ -29,30 +29,6 @@ This project demonstrates a full-stack flow using Node.js, Express, and EJS, wit
 
 </details>
 
-## 📸 Screenshots
-
-### Desktop View & Cart in Action
-- Desktop Version
-  ![Homepage Desktop](./images/homepage-desktop.png)
-- Cart with Items
-  ![Cart with Items](./images/cart-with-items.png)
-
-<details>
-  <summary>Click to view more screenshots (Mobile, Modal, Checkout, Empty Cart)</summary>
-
-- Mobile Version
-  ![Homepage Mobile](./images/homepage-mobile.png)
-- Ingredients Modal
-  ![Ingredients Modal](./images/ingredients-modal.png)
-- Empty Cart
-  ![Empty Cart](./images/empty-cart.png)
-- Empty Cart Alert
-  ![Empty Cart Alert](./images/empty-cart-alert.png)
-- Checkout Confirmation
-  ![Checkout Confirmation](./images/checkout-confirmation.png)
-
-</details>
-
 ---
 
 ## 🚀 Features
